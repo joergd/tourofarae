@@ -39,9 +39,11 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-      main: {
-        src: 'src/index.html',
-        dest: 'build/index.html',
+      html: {
+        expand: true,
+        cwd: 'src/',
+        src: '*.html',
+        dest: 'build/',
       },
       images: {
         expand: true,
@@ -56,7 +58,7 @@ module.exports = function(grunt) {
         tasks: ['less']
       },
       copy: {
-        files: ['src/index.html'],
+        files: ['src/*.html'],
         tasks: ['copy']
       },
       js: {
