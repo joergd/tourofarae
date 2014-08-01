@@ -20,12 +20,19 @@ module.exports = function(grunt) {
       options: {
         separator: ';',
       },
-      vendor: {
+      vendorJS: {
         src: [
           './bower_components/skrollr/dist/skrollr.min.js',
+          './bower_components/fancybox/source/jquery.fancybox.pack.js',
           'tmp/bower_components/bootstrap/js/scrollspy.js'
         ],
         dest: 'build/js/vendor.min.js',
+      },
+      vendorCSS: {
+        src: [
+          './bower_components/fancybox/source/jquery.fancybox.css'
+        ],
+        dest: 'build/css/vendor.css',
       }
     },
     less: {
@@ -50,6 +57,12 @@ module.exports = function(grunt) {
         cwd: 'src/img/',
         src: '**/*',
         dest: 'build/img/',
+      },
+      vendor_js: {
+        expand: true,
+        cwd: 'src/js/vendor',
+        src: '**/*',
+        dest: 'build/js/',
       }
     },
     watch: {

@@ -22,11 +22,18 @@
   height: 600px;
   overflow: hidden;
   min-width: 100%;
-  background: url(img/header/video-poster.jpg) no-repeat;
+  background: url(../img/header/video-poster.jpg) no-repeat;
 }
 
 .video-for-header {
   position: absolute;
   bottom: 0px;
   width: 100%;
+}
+
+.video-fallback {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
